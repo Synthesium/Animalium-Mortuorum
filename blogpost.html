@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <!-- Bootstrap core CSS -->
+  <div id="links">
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!--css-->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="bootstrap.min.css">
+
+
+  <!--fonts-->
+  <link href='https://fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet'>
+
+  <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet'>
+</div>
+
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <div class="float-panel" ><!--navbar-->  
+  <nav class="navbar navbar-expand-lg navbar-dark  static-top" >
+
+  <div class="container">
+    <a class="navbar-brand" href="#" style=" font-family: 'Cinzel Decorative';font-size: 22px;">Animalium Mortuorum
+         <!-- <img src="minilogo.png" height="70%" width="70%" alt="oops. loks like there is nothing here"> -->
+        </a>
+
+        <!--responsive button menu-->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> 
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <!--responsive button menu-->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>   
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="form.html">Post Obituary</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="blogpost.html">Macabre</a>
+        </li>
+        
+
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="jumbotron jumbotron-fluid  text-center" style="background:linear-gradient(to top left , #7d0633, #28df99);"id="jumbos">
+  <div class="container">
+  <div class="justify-content-md-center">
+<h1 class="display-1 text-black">Macabre, the blog </h1>
+<p class="lead text-black">As the name sugests , and as per the requisite sterotype of the darkweb , this is a blog that dedicates itself to shining light on everything that is gruesome, grisly and grotesque. Atleast when we are not discussing information security.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- the blog-->
+  <!-- Page Content -->
+  <div class="container ">
+
+    <div class="row">
+
+      <!-- Post Content Column -->
+      <div class="col-lg-8">
+
+        <!-- Title -->
+        <h1 class="mt-4 text-white">Hosting on the dark web</h1>
+
+        <!-- Author -->
+        <p class="lead text-white">
+          by
+          <a href="#" >Yours truly</a>
+        </p>
+
+        <hr>
+
+        <!-- Date/Time -->
+        <p class="text-white">Posted on September 09, 2020 at 04:58 PM</p>
+
+        <hr>
+
+        <!-- Preview Image -->
+        <img class="img-fluid rounded" src="darkwebbanner.jpg" alt="The dark web">
+
+        <hr>
+
+        <!-- Post Content --><div style="color:white;">
+          <p>There is a lot of misconception around the dark web, and most of the people think that it is not possible to create their website on Dark web (The Onion network). Today we will set up a website in the Onion/Tor network for free (With our own home server).
+
+</p>
+        <p>As you can see above, I have created my website in the Tor network, and I've accessed it using the Tor Browser.</p>
+
+<p>This tutorial consists of three steps </p>
+
+<ol>
+<li>Preparing your computer (Not a real step)</li>
+<li>Installing &amp; Configuring nginx</li>
+<li>Installing Tor</li>
+<li>Configuring the Tor server</li>
+</ol>
+
+<h2>
+  <a name="ingredients" href="#ingredients" class="anchor">
+  </a>
+  Ingredients
+</h2>
+
+<ul>
+<li>An old computer (You can try on AWS EC2, but I've not tried it there) </li>
+<li>A stable internet connection </li>
+<li>2 hours </li>
+<li>Comfort using terminal </li>
+</ul>
+
+<h2>
+  <a name="instructions" href="#instructions" class="anchor">
+  </a>
+  Instructions
+</h2>
+
+<p>To begin with, find a spare computer that can be used as a server (If you don't have one, you can try following the tutorial on an AWS EC2 or similar service). Also, you do not need a static IP for your dark web website. </p>
+
+<p>To follow the tutorial, You will need to install a Linux based OS on the server (we will refer your spare computer/cloud computer as a server from now),  I have tested the below steps on <strong>Ubuntu 18.04 Server LTS</strong> and I recommend that you also use the same. Ubuntu 20.04 doesn't seem to work well with Tor.</p>
+
+
+<p><strong>Important</strong>: Make sure you are running as root throughout the tutorial.<br>
+</p>
+
+<div class="highlight container"><pre class="highlight container plaintext"><code>sudo su
+</code></pre></div>
+
+
+
+<p>Let's get our hands dark </p>
+
+<h3>
+  <a name="installing-amp-configuring-nginx" href="#installing-amp-configuring-nginx" class="anchor">
+  </a>
+  Installing &amp; Configuring nginx
+</h3>
+
+<p>The role of <code>nginx</code> is to serve the HTML files and assets (act as a web server).<br>
+</p>
+
+<div class="highlight container"><pre class="highlight container plaintext"><code>apt update
+apt install nginx
+</code></pre></div>
+
+
+
+<p>The above commands will update the server &amp; install <code>nginx</code>. To start the <code>nginx</code> server<br>
+</p>
+
+<div class="highlight container"><pre class="highlight container plaintext"><code>service nginx start
+</code></pre></div>
+
+
+
+<p>To check the status of the <code>nginx</code> server<br>
+</p>
+
+<div class="highlight container"><pre class="highlight container plaintext"><code>service nginx status
+</code></pre></div>
+
+
+
+<p>To confirm if the <code>nginx</code> server is working. We will make a <code>GET</code> request to the server using <code>curl</code>. Before that, you'll need to know what is your IP address.<br>
+</p>
+
+<div class="highlight container"><pre class="highlight container plaintext"><code>ifconfig
+</code></pre></div>
+
+
+
+<p>The output will be similar to this<br>
+</p>
+
+<div class="highlight container"><pre class="highlight container plaintext"><code>lo: flags=73&lt;UP,LOOPBACK,RUNNING&gt;  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10&lt;host&gt;
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 134  bytes 21230 (21.2 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 134  bytes 21230 (21.2 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlp9s0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+        inet your-ip-address  netmask 255.255.255.0  broadcast ###.###.#.###
+        inet6 ####::####:####:####:####  prefixlen 64  scopeid 0x20&lt;link&gt;
+        ether ##:##:##:##:##:##  txqueuelen 1000  (Ethernet)
+        RX packets 6379  bytes 8574482 (8.5 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 3518  bytes 506008 (506.0 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+</code></pre></div>
+
+
+
+<p>Find your IP address in <code>inet your-IP-address</code>. Note it down, using that now make a <code>curl</code> request.<br>
+</p>
+
+<div class="highlight container"><pre class="highlight container plaintext"><code>curl your-IP-address:80
+</code></pre></div>
+
+
+
+<p>The console should print out the HTML code of the default <code>nginx</code> page. You can also check if <code>nginx</code> is working by typing the IP address of the server in your browser.  </p>
+
+<h3>
+  <a name="installing-tor" href="#installing-tor" class="anchor">
+  </a>
+  Installing Tor
+</h3>
+
+<p>Installing Tor (not just the browser) allows your computer to communicate with the Tor network. Before installing Tor, we will have to install <code>apt-transport-https</code>, so that we can use source lines with <code>https://</code><br>
+</p>
+
+<div class="highlight container"><pre class="highlight container plaintext"><code>apt install apt-transport-https
+</code></pre></div>
+
+
+
+<p><strong>Important</strong>: The below commands are for Ubuntu 18.04 only<br>
+If you are running other OS, please find the commands <a href="https://2019.www.torproject.org/docs/debian.html.en">here, from Tor's official, site</a>. We will now open the sources file to add the Tor sources.<br>
+</p>
+
+<div class="highlight container"><pre class="highlight container plaintext"><code>touch /etc/apt/sources.list.d/
+nano /etc/apt/sources.list.d/
+</code></pre></div>
+
+
+
+<p>Once the editor is open, add the following sources to the file<br>
+</p>
+
+<div class="highlight container"><pre class="highlight container plaintext"><code>deb https://deb.torproject.org/torproject.org bionic main
+deb-src https://deb.torproject.org/torproject.org bionic main
+</code></pre></div>
+
+
+
+<p>After exit &amp; saving, type the following in the terminal. This is to add the gpg key used to sign the Tor packages.<br>
+</p>
+
+<div class="highlight container"><pre class="highlight container plaintext"><code>curl https://deb.torproject.org/torproject.org/A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89.asc | gpg --import
+gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | apt-key add -
+</code></pre></div>
+
+
+
+<p>Finally, now we install Tor and also a package which will help to keep the signing key current.<br>
+</p>
+
+<div class="highlight container"><pre class="highlight container plaintext"><code>apt update
+apt install tor deb.torproject.org-keyring
+</code></pre></div>
+
+
+
+<p>Similar to <code>nginx</code>, Tor can be started &amp; checked by the following commands<br>
+</p>
+
+<div class="highlight container"><pre class="highlight container plaintext"><code>service nginx start
+service nginx status
+</code></pre></div>
+
+
+
+<h3>
+  <a name="setting-up-the-tor-server" href="#setting-up-the-tor-server" class="anchor">
+  </a>
+  Setting up the tor server
+</h3>
+
+<p>Now that we have <code>nginx</code> &amp; Tor up and running, we will have to configure Tor so that our server acts as a Tor server <strong>(Your server will not be used as a relay node)</strong> </p>
+
+<p>For this, we will have to edit the <code>torrc</code> file. The <code>torrc</code> is the configuration file for your Tor, the power of the file is such that, you can alter Tor to act as a proxy server &amp; contribute to the Tor network (Not in this tutorial). In this tutorial, the <code>torrc</code> will be configured to act as a tor webserver (onion service).<br>
+</p>
+
+<div class="highlight container"><pre class="highlight container plaintext"><code>nano /etc/tor/torrc
+</code></pre></div>
+
+
+
+<p>In the <code>torrc</code> file, Go to the middle section and look for the line<br>
+</p>
+
+<div class="highlight container"><pre class="highlight container plaintext"><code>############### This section is just for location-hidden services ###
+</code></pre></div>
+
+
+
+<p>And uncomment the following lines.<br>
+</p>
+
+<div class="highlight container"><pre class="highlight container plaintext"><code>HiddenServiceDir /var/lib/tor/hidden_service/
+HiddenServicePort 80 127.0.0.1:80
+</code></pre></div>
+
+
+
+<p>In these lines,</p>
+
+<ul>
+<li><p><code>HiddenServiceDir</code> will tell Tor where to save the private_key &amp; hostname of your Tor website (They are information about your dark website). The private key stored is very important &amp; could be used to impersonate you. In case you change your server, you just need to copy-paste your private key into the new server.</p></li>
+<li><p><code>HiddenServicePort</code> lets you specify a virtual port (that is, what port people accessing the website will think they're using) and an IP address and port for redirecting connections to this virtual port.</p></li>
+</ul>
+
+<p>To apply this new configuration, Stop the Tor service and start it again by typing the following commands.<br>
+</p>
+
+<div class="highlight container"><pre class="highlight container plaintext"><code>service tor stop
+service tor start
+</code></pre></div>
+
+
+
+<p>Now check the status of the tor service to see if the changes are working &amp; valid.<br>
+</p>
+
+<div class="highlight container"><pre class="highlight container plaintext"><code>service tor status
+</code></pre></div>
+
+
+
+<p>If things are looking good, proceed to the next step, otherwise, you might have made a mistake in editing the <code>.torrc</code> file.</p>
+
+<p>At this point, your dark website must be running. But we don't know what is the URL, to get it, run the following command<br>
+</p>
+
+<div class="highlight container"><pre class="highlight container plaintext"><code>cat /var/lib/tor/hidden_service/hostname
+</code></pre></div>
+
+
+
+<p>The URL to your all-new dark website will be printed in the console. To test if it's working<br>
+</p>
+
+<div class="highlight container"><pre class="highlight container plaintext"><code>curl -v --socks5-hostname localhost:9050 http://your-onion-domain.onion
+</code></pre></div>
+
+
+
+<p>The URL is actually <code>your-public-RSA-key.onion</code>. Tor has a different way of identifying websites, i.e. via their public RSA key.</p>
+
+<p>You might notice that the URL generated, is very long and you might be wondering how to create custom hostname (i.e. Custom RSA public key). I will be creating an article on this topic very soon. </p>
+
+
+<br>
+
+<p class="lead"> Credit where its due. This blog was originally authored by a certain Lenvin Gonzalves. It was a tad bit outdated . This the updated version with additional information regarding installation of tor in Ubuntu 20.04 amongst other things. But hey, the hosting of this website wouldn't have been possible without it.</p>
+</div>
+
+        
+
+        <hr>
+
+        <!-- Comments Form -->
+        
+
+        <!-- Single Comment -->
+        
+        <!-- Comment with nested comments -->
+        
+      </div>
+
+      <!-- Sidebar Widgets Column -->
+      <div class="col-md-4">
+
+        <!-- Search Widget -->
+        
+
+        <!-- Categories Widget -->
+        <div class="card my-4">
+          <h5 class="card-header">Other Posts</h5>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="#">Vanity Tor address with eschalot</a>
+                  </li>
+                  <li>
+                    <a href="#">Za Warudo</a>
+                  </li>
+                  <li>
+                    <a href="#">Open-gpt-3</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="#">Lampyre</a>
+                  </li>
+                  <li>
+                    <a href="#">Chntpw</a>
+                  </li>
+                  <li>
+                    <a href="#">Others...</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Side Widget -->
+        <div class="card my-4">
+          <h5 class="card-header">Upcoming Posts</h5>
+          <div class="card-body">
+            Deepsound
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
